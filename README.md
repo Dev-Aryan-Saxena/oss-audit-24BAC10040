@@ -10,7 +10,7 @@
 
 **License:** GNU General Public License v2 (GPL v2)
 
-**Repository:** https://github.com/Dev-Aryan-Saxena/NGMC-OSS-Project.git
+**Repository:** https://github.com/Dev-Aryan-Saxena/oss-audit-24BAC10040.git
 
 
 ---
@@ -78,7 +78,7 @@ sudo dnf install kmod coreutils -y
 
 ```bash
 # Clone the repository
-git clone https://github.com/Dev-Aryan-Saxena/NGMC-OSS-Project.git
+git clone https://github.com/Dev-Aryan-Saxena/oss-audit-24BAC10040.git
 
 # Navigate to scripts folder
 cd Shell-Scripts

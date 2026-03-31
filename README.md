@@ -1,104 +1,182 @@
-OSS Audit — Linux Kernel 
+# OSS Audit — Linux Kernel
+
+**Student:** Aryan Saxena
+
+**Roll Number:** 24BAC10040
+
+**Course:** Open Source Software — CSE0002
+
+**Chosen Software:** Linux Kernel (Operating System Core)
+
+**License:** GNU General Public License v2 (GPL v2)
+
+**Repository:** https://github.com/Dev-Aryan-Saxena/NGMC-OSS-Project.git
 
 
+---
 
+## 📖 About This Project
 
-Student: Aryan Saxena
-Roll Number: 24BAC10040
-Course: Open Source Software — CSE0002
-Chosen Software: Linux Kernel (Operating System Core)
-License: GNU General Public License v2 (GPL v2)
-Repository: NGMC-OSS-PROJECT
+This repository contains the capstone audit of the **Linux Kernel**, one of the most significant collaborative projects in software history. Conducted as part of the Open Source Software (OSS NGMC) course, this audit examines the kernel's evolution from a 1991 hobby project to critical global infrastructure.
 
+The project includes a deep-dive analysis of the **GPL v2 "Copyleft" licensing model** and its impact on modern Linux systems.
 
+Additionally, five original shell scripts are developed to demonstrate:
 
-📖 About This Project
-This repository contains the capstone audit of the Linux Kernel, the most significant collaborative project in software history. Conducted as part of the Open Source Software (OSS NGMC) course, this audit examines the kernel's transition from a 1991 hobby project to global infrastructure.
-The project includes a deep-dive analysis into the GPL v2 "Copyleft" licensing model and its technical footprint on modern Linux systems. To complement the written report, I have developed five original shell scripts that demonstrate practical Linux auditing, subsystem inspection, and shell scripting proficiency.
+* Linux auditing
+* Subsystem inspection
+* Shell scripting proficiency
 
+---
 
+## 🐧 Chosen Software: The Linux Kernel
 
-🐧 Chosen Software : The Linux Kernel
-The Linux Kernel was created by Linus Torvalds in 1991. Unlike proprietary kernels (Windows NT), Linux is a monolithic but modular system. Its success is rooted in its license; by choosing the GPL v2, Torvalds ensured that every improvement made by global corporations must be shared back with the community. This audit explores how this "social contract" powers the modern world.
+The Linux Kernel was created by **Linus Torvalds** in 1991. Unlike proprietary kernels (such as Windows NT), Linux follows a **monolithic but modular architecture**.
 
-🛠️ Setup & Configuration
+Its success is strongly tied to its license — **GPL v2**, which ensures that improvements made by organizations must be shared with the community.
 
-1. Environment Setup
-The project is designed for Linux environments (Ubuntu, Debian, CentOS, RHEL, Fedora). The scripts are designed to be "Hardware Agnostic," meaning they audit the kernel logic rather than specific hardware serials, ensuring user privacy.
+This audit explores how this open-source "social contract" powers modern computing systems worldwide.
 
-2. Dependency Check
+---
 
-Ensure your system has standard coreutils and kernel tools installed.
-Ubuntu / Debian: sudo apt update && sudo apt install kmod coreutils -y
-RHEL / Fedora: sudo dnf install kmod coreutils -y
+## 🛠️ Setup & Configuration
 
+### 1. Environment Setup
 
-3. Execution Instructions
+This project is designed for Linux environments such as:
 
+* Ubuntu
+* Debian
+* CentOS
+* RHEL
+* Fedora
+* Arch
+
+The scripts are **hardware-agnostic**, meaning they analyze kernel behavior without exposing hardware-specific identifiers.
+
+---
+
+### 2. Dependency Installation
+
+Ensure your system has required tools installed:
+
+**Ubuntu / Debian:**
+
+```bash
+sudo apt update && sudo apt install kmod coreutils -y
+```
+
+**RHEL / Fedora:**
+
+```bash
+sudo dnf install kmod coreutils -y
+```
+
+---
+
+### 3. Execution Instructions
+
+```bash
 # Clone the repository
 git clone https://github.com/Dev-Aryan-Saxena/NGMC-OSS-Project.git
+
+# Navigate to scripts folder
 cd Shell-Scripts
 
-# Make all scripts executable
+# Make scripts executable
 chmod +x *.sh
 
-# Run the scripts
+# Run any script
 ./[script_name].sh
+```
 
+---
 
+## 📁 Repository Structure
 
-📁 Repository Structure
-
+```
 NGMC-OSS-Project/
-├── README.md                                                     ← Project documentation 
-├── PROJECT_REPORT.md                                    ← Project report 
-├──Shell-Scripts-Screenshots/                                   ←O/P Screenshots
-     ├──DiskAndPermissionAuditor.jpg
-     ├──FossPackageInspector.jpg
-     ├──LogFileAnalyser.jpg
-     ├──SystemIdentityReport.jpg
-     ├──TheOpenSourceManifestoGenerator.jpg
-└── Shell-Scripts/
-    ├── diskAndPermmisssionAuditor.sh                  ← Disk and Permission Auditor
-    ├── fossPackageInspector.sh                                ← FOSS Package Inspector
-    ├── logFileAnalyser.sh                                         ← Log File Analyzer
-    ├── systemIdentityReport.sh                                ← System Identity Report
-    └── theOpenSourceManifestoGenerator.sh          ← Open Source Manifesto Generator
+├── README.md                          ← Project documentation  
+├── PROJECT_REPORT.md                  ← Project report  
+├── Shell-Scripts-Screenshots/         ← Output screenshots  
+│   ├── DiskAndPermissionAuditor.jpg  
+│   ├── FossPackageInspector.jpg  
+│   ├── LogFileAnalyser.jpg  
+│   ├── SystemIdentityReport.jpg  
+│   ├── TheOpenSourceManifestoGenerator.jpg  
+└── Shell-Scripts/  
+    ├── diskAndPermmisssionAuditor.sh  
+    ├── fossPackageInspector.sh  
+    ├── logFileAnalyser.sh  
+    ├── systemIdentityReport.sh  
+    └── theOpenSourceManifestoGenerator.sh  
+```
 
+---
 
+## 📜 Script Descriptions
 
-📜 Script Descriptions
+### 1. System Identity Report
 
-Script 1: System Identity Report
-File: systemIdentityReport.sh
-Description: Displays a formatted welcome screen with distribution details, kernel version, and the GPL v2 license notice.
-Concepts: Variables, Command Substitution $(), and echo.
+**File:** `systemIdentityReport.sh`
 
+Displays system information including distribution details, kernel version, and GPL v2 notice.
 
-Script 2: Kernel Component Inspector
-File: fossPackageInspector.sh
-Description: Audits the presence of the linux-image package and supporting FOSS tools (GCC, LibC). Uses a case statement to describe the purpose of each subsystem.
-Concepts: if-else, case statements, and dpkg/rpm queries.
+**Concepts:** Variables, command substitution `$()`, `echo`
 
-Script 3: Disk & Permission Auditor
-File: diskAndPermissionAuditor.sh
-Description: Loops through critical kernel directories (/boot, /lib/modules) to report permissions, ownership, and disk usage.
-Concepts: for loops, du, ls -ld, and awk.
+---
 
-Script 4: Kernel Log Analyzer
-File: logFileAnalyzer.sh
-Description: Interrogates the kernel ring buffer (dmesg) for specific technical flags or errors and provides a frequency count.
-Concepts: while read loops, input redirection, and arithmetic expansion.
+### 2. Kernel Component Inspector
 
-Script 5: Open Source Manifesto Generator
-File: theOpenSourceManifestoGenerator.sh
-Description: An interactive tool that collects user input on FOSS values and generates a persistent .txt manifesto file.
-Concepts: read -p, string concatenation, and file writing with > and >>.
+**File:** `fossPackageInspector.sh`
 
-🛡️ Security & Privacy Note
-No Hardcoded Data: These scripts use environment variables like $USER and $HOME to ensure no personal paths are leaked.
-Non-Invasive: Script 4 uses a local temporary file for log analysis to avoid requiring sudo or accessing sensitive system logs.
-Portable: Designed to run safely on any standard Linux distribution without exposing hardware UUIDs or MAC addresses.
+Checks for Linux kernel packages and essential FOSS tools (GCC, LibC).
 
-⚖️ License
-This project is submitted as coursework for the OSS NGMC course. The shell scripts and report are original works for academic evaluation.
+**Concepts:** `if-else`, `case`, package queries (`dpkg`, `rpm`)
+
+---
+
+### 3. Disk & Permission Auditor
+
+**File:** `diskAndPermissionAuditor.sh`
+
+Analyzes permissions, ownership, and disk usage of key kernel directories.
+
+**Concepts:** `for` loops, `du`, `ls -ld`, `awk`
+
+---
+
+### 4. Kernel Log Analyzer
+
+**File:** `logFileAnalyser.sh`
+
+Examines kernel logs (`dmesg`) and counts occurrences of specific events.
+
+**Concepts:** `while read`, input redirection, arithmetic expansion
+
+---
+
+### 5. Open Source Manifesto Generator
+
+**File:** `theOpenSourceManifestoGenerator.sh`
+
+Interactive script that generates a personalized FOSS manifesto file.
+
+**Concepts:** `read -p`, string concatenation, file writing (`>`, `>>`)
+
+---
+
+## 🛡️ Security & Privacy Note
+
+* **No Hardcoded Data:** Uses environment variables like `$USER` and `$HOME`
+* **Non-Invasive:** Avoids privileged access; uses temporary files for log analysis
+* **Portable:** Runs on standard Linux distributions without exposing sensitive data
+
+---
+
+## ⚖️ License
+
+This project is submitted as coursework for the OSS NGMC course.
+All shell scripts and documentation are original works created for academic evaluation.
+
+---
